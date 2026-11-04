@@ -7,10 +7,12 @@ A production framework for a Cyberpunk 2077 Ultimate Edition (PC) total conversi
 ## Start here
 
 - [Total Conversion Master Blueprint v1.0](docs/TOTAL_CONVERSION_MASTER_BLUEPRINT_V1_0.md) — product definition, base-game reuse, original development scope, campaign separation, world strategy, AI-first pipeline, vertical slice and release gates.
+- [Base-Game Carryover Matrix](docs/BASE_GAME_CARRYOVER_MATRIX.md) — reusable gameplay, cyberware, weapons, vehicles, NPCs, environments, UI and new development requirements.
 - [AI Studio Architecture](docs/AI_STUDIO_ARCHITECTURE.md) — agent roster, model routing, autonomy tiers, task contracts, cost controls and Windows Build Runner.
 - [World Conversion Plan](docs/WORLD_CONVERSION_PLAN.md) — 12 provisional district labels, asset mapping hypotheses, world data model and West Palm City first slice.
 - [Campaign and Gameplay Architecture](docs/CAMPAIGN_AND_GAMEPLAY_ARCHITECTURE.md) — Rook, ECHO-9, campaign state, quest lifecycle, v2.4 integration and ending requirements.
 - [Asset Reuse and Provenance](docs/ASSET_REUSE_AND_PROVENANCE.md) — base-game reuse inventory, original asset needs and rights safeguards.
+- [UI, Audio and Presentation Plan](docs/UI_AUDIO_CONVERSION_PLAN.md) — menu, map, journal, identity cleanup, radio, dialogue and VO.
 - [Technical POC and Build Runner](docs/TECHNICAL_POC_AND_BUILD_RUNNER.md) — five proof spikes, toolchain locking and controlled Windows runtime validation.
 - [QA and Release Plan](docs/QA_AND_RELEASE_PLAN.md) — test strategy, known v2.4 blockers and release criteria.
 - [Production Backlog](docs/PRODUCTION_BACKLOG.md) — initial prioritized implementation tickets.
