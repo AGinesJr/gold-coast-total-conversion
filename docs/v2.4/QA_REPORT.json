@@ -1,0 +1,28 @@
+{
+  "version": "2.4.0",
+  "status": "FAIL",
+  "quests": 41,
+  "nodes": 1574,
+  "edges": 1901,
+  "eventPools": 36,
+  "eventRecords": 108,
+  "scenarioFixtures": 313,
+  "unreachableNodes": 164,
+  "duplicateIDs": 0,
+  "badConditions": 0,
+  "choiceNodesMissingEdges": [],
+  "coverage": {
+    "staticReachability": "incomplete",
+    "edgeExecution": "NOT_RUN",
+    "conditionTruth": "NOT_RUN",
+    "choiceExecution": "NOT_RUN",
+    "endingExecution": "NOT_RUN",
+    "inGameSmoke": "NOT_RUN"
+  },
+  "blockers": [
+    "164 unreachable nodes",
+    "v2.1 source dialogue import pending",
+    "event VO placeholders",
+    "REDengine integration not executed"
+  ]
+}
