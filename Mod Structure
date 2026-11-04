@@ -1,0 +1,63 @@
+GOLD COAST
+│
+├── Gold Coast Launcher / New Game
+│
+├── Gold Coast World
+│   ├── Crown
+│   ├── West Palm City
+│   ├── Silicon Coast
+│   ├── The Belt
+│   ├── The Arc
+│   ├── Frontier
+│   ├── Sugarlands
+│   ├── Lake Corridor
+│   ├── Green Hell
+│   ├── Atlantis
+│   ├── Abyss
+│   └── Skyports
+│
+├── Gold Coast Story
+│   ├── Rook
+│   ├── ECHO-9
+│   ├── Project ECHO
+│   ├── Main Campaign
+│   ├── Lifepaths
+│   ├── Side Quests
+│   └── Endings
+│
+├── Gold Coast Factions
+│   ├── Arasaka
+│   ├── Militech
+│   ├── Kang Tao
+│   ├── Petrochem
+│   ├── Night Corp
+│   ├── Crown Boys
+│   ├── Iron Saints
+│   ├── Breakers
+│   ├── Velvets
+│   ├── Canal Rats
+│   ├── Sawgrass Nomads
+│   └── Atlantic Ghosts
+│
+├── Gold Coast Gameplay
+│   ├── Combat
+│   ├── Economy
+│   ├── Reputation
+│   ├── Jobs
+│   ├── Vehicles
+│   ├── Progression
+│   └── Endgame
+│
+├── Gold Coast UI
+│   ├── Menus
+│   ├── Map
+│   ├── Journal
+│   ├── Database
+│   └── Loading Screens
+│
+└── Gold Coast Audio
+    ├── Radio
+    ├── Music
+    ├── Dialogue
+    ├── Ambient Audio
+    └── Sound Effects
