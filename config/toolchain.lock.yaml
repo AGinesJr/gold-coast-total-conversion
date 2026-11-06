@@ -14,16 +14,17 @@ game:
   install_profile: isolated_gold_coast_required
   evidence:
     - "Owner-provided Cyberpunk2077.exe VersionInfo output (2026-11-06)"
-    - "CD Projekt RED support identifies 2.5 as latest (checked 2026-11-06)"
 operating_environment:
   os: "Windows 11 Home 10.0.26300 (owner observation)"
   cpu: "Intel i7 (owner-reported; exact model unknown)"
   ram_gib: 39.7
   gpu: "NVIDIA RTX 3070 Laptop GPU"
-  vram_gib: 8 (owner-reported/planning value; verify runtime)
-  python: "Python 3.13 executable path observed; exact version not queried"
-  node: "installed; version unknown"
-  dotnet: "installed; version unknown"
+  vram_gib: 8
+  nvidia_smi: "NVIDIA-SMI 621.01; KMD 621.01; CUDA UMD 13.5; 8192 MiB reported (2026-11-06)"
+  python: "3.13.5"
+  git: "2.50.1.windows.1"
+  node: "22.17.0"
+  dotnet: "10.0.401"
 tools:
   wolvenkit:
     status: candidate
