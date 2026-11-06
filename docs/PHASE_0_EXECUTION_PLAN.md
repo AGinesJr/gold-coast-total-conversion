@@ -24,7 +24,7 @@ The original blueprint remains the product/canon baseline, but the expanded tool
 ## Initial order (dependency-aware)
 
 1. **P0-A / pipeline bootstrap (now):** establish task schema, validator, CI, reusable task template and evidence conventions.
-2. **P0-B / toolchain lock:** obtain the actual installed Cyberpunk executable/build, DLC state, OS and tool versions. Until physically inspected, lock entries remain `unknown` or `candidate`, never fabricated.
+2. **P0-B / toolchain lock:** run the read-only `scripts/collect_toolchain_observation.ps1` on the Windows workstation (optionally pass `-GamePath` and `-OutFile`); inspect the Cyberpunk executable/build, DLC state, OS and installed tools. Manually confirm DLC and framework versions. Until physically inspected, lock entries remain `unknown` or `candidate`, never fabricated.
 3. **P0-C / resource catalog:** define metadata-only records and provenance/license checks; index assets locally on the Windows machine later.
 4. **P0-D / asset pipeline spike:** use WolvenKit as baseline; evaluate EDGEkit/REDcode for agent integration. Prove one original asset package in a disposable install.
 5. **P0-E / world spike:** test one small sector with a documented baseline, edit, collision/streaming/spawn checks and rollback.
