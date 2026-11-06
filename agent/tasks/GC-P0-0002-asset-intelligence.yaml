@@ -1,0 +1,42 @@
+task_id: GC-P0-0002
+agent: AG-03
+objective: Build a metadata-only asset catalog index with provenance and rights safeguards.
+context:
+  - docs/P0_C_ASSET_INTELLIGENCE.md
+  - schemas/asset-catalog-record.schema.json
+  - config/toolchain.lock.yaml
+allowed_paths:
+  - catalogs/
+  - schemas/asset-catalog-record.schema.json
+  - scripts/build_asset_index.py
+  - tests/
+  - docs/P0_C_ASSET_INTELLIGENCE.md
+forbidden_actions:
+  - push_to_main
+  - merge_pull_request
+  - publish_release
+  - alter_locked_canon
+  - modify_user_game_install
+  - extract_or_commit_proprietary_game_assets
+  - redistribute_base_game_asset_bytes
+  - execute_untrusted_shell
+deliverables:
+  - metadata_only_asset_indexer
+  - provenance_and_rights_workflow
+  - duplicate_id_and_license_guard_tests
+  - sample_catalog_index
+acceptance:
+  - all_catalog_records_validate
+  - duplicate_asset_ids_rejected
+  - base_game_records_require_no_redistribution
+  - index_contains_metadata_only
+  - unknown_rights_remain_unresolved
+  - ci_passes
+risk_tier: low
+budget:
+  max_model_calls: 12
+  max_retries: 2
+  max_minutes: 60
+reviewer: AG-11
+rollback: revert_task_branch_or_close_pull_request
+status: approved
