@@ -6,6 +6,11 @@ A production framework for a Cyberpunk 2077 Ultimate Edition (PC) total conversi
 
 ## Start here
 
+- [Phase 0 Execution Plan](docs/PHASE_0_EXECUTION_PLAN.md) — autonomous pipeline-first execution, staged proof spikes and acceptance gates.
+- [Phase 0 Runner Threat Model](docs/PHASE_0_RUNNER_THREAT_MODEL.md) — proposed Windows runner security boundary and allowlist.
+- [Toolchain Discovery Lock](config/toolchain.lock.yaml) — candidate/unknown versions; no version is treated as verified without evidence.
+- [Agent Task Schema](schemas/agent-task.schema.json) and [sample task](agent/tasks/GC-P0-0001-pipeline-bootstrap.yaml) — bounded agent contracts.
+
 - [Total Conversion Master Blueprint v1.0](docs/TOTAL_CONVERSION_MASTER_BLUEPRINT_V1_0.md) — product definition, base-game reuse, original development scope, campaign separation, world strategy, AI-first pipeline, vertical slice and release gates.
 - [Base-Game Carryover Matrix](docs/BASE_GAME_CARRYOVER_MATRIX.md) — reusable gameplay, cyberware, weapons, vehicles, NPCs, environments, UI and new development requirements.
 - [AI Studio Architecture](docs/AI_STUDIO_ARCHITECTURE.md) — agent roster, model routing, autonomy tiers, task contracts, cost controls and Windows Build Runner.

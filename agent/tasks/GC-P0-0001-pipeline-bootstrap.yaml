@@ -1,0 +1,41 @@
+task_id: GC-P0-0001
+agent: AG-00
+objective: Establish and validate the first bounded autonomous repository task pipeline.
+context:
+  - docs/PHASE_0_EXECUTION_PLAN.md
+  - docs/AI_STUDIO_ARCHITECTURE.md
+  - schemas/agent-task.schema.json
+allowed_paths:
+  - docs/PHASE_0_EXECUTION_PLAN.md
+  - schemas/
+  - scripts/
+  - tests/
+  - .github/workflows/
+  - agent/tasks/
+forbidden_actions:
+  - push_to_main
+  - merge_pull_request
+  - publish_release
+  - alter_locked_canon
+  - modify_user_game_install
+  - commit_proprietary_game_assets
+  - execute_untrusted_shell
+deliverables:
+  - task_contract_schema
+  - task_validator
+  - positive_and_negative_tests
+  - github_actions_validation
+acceptance:
+  - schema_valid
+  - valid_task_accepted
+  - malformed_task_rejected
+  - ci_runs_on_pull_request
+  - evidence_report_generated
+risk_tier: low
+budget:
+  max_model_calls: 10
+  max_retries: 2
+  max_minutes: 45
+reviewer: AG-11
+rollback: revert_task_branch_or_close_pull_request
+status: approved

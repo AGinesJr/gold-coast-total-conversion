@@ -1,0 +1,117 @@
+# Gold Coast Phase 0 toolchain lock
+# Do not replace unknowns with guessed version numbers. Update only with observed versions + evidence.
+schema_version: 1
+last_reviewed: 2026-11-05
+lock_status: discovery
+game:
+  title: Cyberpunk 2077
+  edition: Ultimate Edition (owner-reported; verify)
+  platform: PC
+  executable_version: unknown
+  build_id: unknown
+  dlc_state: unknown
+  install_profile: isolated_gold_coast_required
+  evidence: []
+operating_environment:
+  os: Windows (owner workstation; verify exact build)
+  cpu: Intel i7 (owner-reported)
+  ram_gib: 40 (owner-reported)
+  gpu: NVIDIA RTX 3070 Laptop GPU (owner-reported)
+  vram_gib: 8 (owner-reported)
+  python: unknown
+  node: unknown
+  dotnet: unknown
+tools:
+  wolvenkit:
+    status: candidate
+    version: unknown
+    role: asset inspection/import/export/packaging
+    source: https://github.com/WolvenKit/WolvenKit
+    evidence: []
+  redmod:
+    status: candidate
+    version: unknown
+    role: official mod deployment/packaging path where applicable
+    source: https://www.cyberpunk.net/en/modding-support
+    evidence: []
+  red4ext:
+    status: candidate
+    version: unknown
+    role: native plugin framework
+    source: https://github.com/WopsS/RED4ext
+    evidence: []
+  archivexl:
+    status: candidate
+    version: unknown
+    role: custom resources/streaming and non-destructive extensions
+    source: https://github.com/psiberx/ArchiveXL
+    evidence: []
+  tweakxl:
+    status: candidate
+    version: unknown
+    role: TweakDB extensions
+    source: https://github.com/psiberx/TweakXL
+    evidence: []
+  redscript:
+    status: candidate
+    version: unknown
+    role: script compilation/mod logic
+    source: https://github.com/jac3km4/redscript
+    evidence: []
+  cet:
+    status: candidate
+    version: unknown
+    role: Lua console/debug and runtime scripting
+    source: https://github.com/maximegmd/CyberEngineTweaks
+    evidence: []
+  codeware:
+    status: candidate
+    version: unknown
+    role: shared libraries/events/UI
+    source: https://github.com/psiberx/Codeware
+    evidence: []
+  edgekit:
+    status: experimental
+    version: unknown
+    role: AI-assisted IDE/workbench evaluation
+    source: https://www.nexusmods.com/cyberpunk2077
+    evidence: []
+  edgequest:
+    status: experimental
+    version: unknown
+    role: quest authoring/MCP proof
+    source: https://github.com/EdgerunnersModding/EDGEquest
+    evidence: []
+  world_builder:
+    status: candidate
+    version: unknown
+    role: world placement/editing proof
+    source: https://wiki.redmodding.org/
+    evidence: []
+  blender:
+    status: candidate
+    version: unknown
+    role: original asset creation and CP2077 addon workflow
+    source: https://github.com/WolvenKit
+    evidence: []
+automation:
+  github_actions:
+    status: active
+    version: hosted
+    role: schema/static checks and repository validation
+    evidence: []
+  codex_agent:
+    status: candidate
+    version: unknown
+    role: bounded repo task execution
+    evidence: []
+  windows_build_runner:
+    status: planned
+    version: unknown
+    role: isolated game build/runtime QA
+    evidence: []
+policy:
+  proprietary_game_assets_in_git: forbidden
+  main_branch_agent_push: forbidden
+  unrestricted_agent_shell: forbidden
+  runtime_claim_without_evidence: forbidden

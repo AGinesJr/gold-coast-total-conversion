@@ -2,15 +2,20 @@
 
 The detailed execution tickets are maintained in [Production Backlog](PRODUCTION_BACKLOG.md). The full product and scope definition is in [Total Conversion Master Blueprint](TOTAL_CONVERSION_MASTER_BLUEPRINT_V1_0.md).
 
-## Phase 0 — Research and technical discovery
+## Phase 0 — Autonomous pipeline first (active)
 
-- Confirm source canon and establish approved ledger.
-- Pin current game/tool versions; evaluate licensing/distribution rules.
-- Prove asset packaging, world-cell/streaming, campaign bootstrap, quest state, save/load and build rollback.
-- Establish AI task orchestration and controlled Windows Build Runner.
-- Define regional map scale and hardware/performance budgets.
+The detailed, dependency-aware execution is [Phase 0 Execution Plan](PHASE_0_EXECUTION_PLAN.md). The expanded toolchain is evaluated rather than assumed.
 
-**Exit:** documented go/no-go with reproducible asset, world, campaign, quest and autonomous-build proofs.
+- P0-A: task contracts, validator, tests and GitHub Actions (repository pipeline first).
+- P0-B: record actual game/tool versions; unknowns remain explicitly unknown.
+- P0-C: metadata-only asset catalogs with provenance and license fields.
+- P0-D: prove one asset workflow (WolvenKit baseline; evaluate EDGEkit/REDcode).
+- P0-E: prove one world/streaming/collision workflow.
+- P0-F: prove campaign isolation and one quest/save-load workflow (EDGEquest evaluated).
+- P0-G: harden an isolated, allowlisted Windows Build Runner.
+- P0-H: demonstrate agent → validation → branch/PR → runner evidence → independent review.
+
+**Exit:** repeatable pipeline plus documented asset/world/campaign/quest/build proofs or explicit no-go results; owner-approved Phase 0 go/no-go.
 
 ## Phase 1 — Gold Coast foundation
 

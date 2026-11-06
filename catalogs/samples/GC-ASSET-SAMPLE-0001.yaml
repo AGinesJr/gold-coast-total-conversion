@@ -1,0 +1,11 @@
+asset_id: GC-ASSET-SAMPLE-0001
+kind: building
+game_version: unknown
+source: base_game_reference
+source_uri: wolvenkit://archive/path/to/reference-not-real
+provenance: Illustrative schema fixture only; not a real asset path or extracted file.
+license_status: base_game_no_redistribution
+license_reference: CDPR EULA and applicable mod/fan-content terms
+reuse_decision: reuse_in_game_only
+verification: unverified
+notes: Metadata-only placeholder. Replace with a locally observed reference; never commit extracted proprietary asset bytes.
