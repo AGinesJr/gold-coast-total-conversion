@@ -18,7 +18,7 @@ function Get-InstalledApp([string]$NamePattern) {
 $candidates = @()
 if ($GamePath) { $candidates += $GamePath }
 $candidates += @(
-  "$env:ProgramFiles(x86)\Steam\steamapps\common\Cyberpunk 2077",
+  "${env:ProgramFiles(x86)}\Steam\steamapps\common\Cyberpunk 2077",
   "$env:ProgramFiles\GOG Galaxy\Games\Cyberpunk 2077",
   "C:\GOG Games\Cyberpunk 2077",
   "C:\Games\Cyberpunk 2077",
