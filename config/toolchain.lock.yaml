@@ -1,33 +1,36 @@
 # Gold Coast Phase 0 toolchain lock
-# Do not replace unknowns with guessed version numbers. Update only with observed versions + evidence.
+# Observed values are recorded with evidence; unknowns remain unknown until verified.
 schema_version: 1
-last_reviewed: 2026-11-05
-lock_status: discovery
+last_reviewed: 2026-11-06
+lock_status: partial_observation
 game:
   title: Cyberpunk 2077
-  edition: Ultimate Edition (owner-reported; verify)
+  edition: unknown
   platform: PC
-  executable_version: unknown
+  executable_product_version: "2.5"
+  executable_file_version: "3.0.5813403"
   build_id: unknown
   dlc_state: unknown
   install_profile: isolated_gold_coast_required
-  evidence: []
+  evidence:
+    - "Owner-provided Cyberpunk2077.exe VersionInfo output (2026-11-06)"
+    - "CD Projekt RED support identifies 2.5 as latest (checked 2026-11-06)"
 operating_environment:
-  os: Windows (owner workstation; verify exact build)
-  cpu: Intel i7 (owner-reported)
-  ram_gib: 40 (owner-reported)
-  gpu: NVIDIA RTX 3070 Laptop GPU (owner-reported)
-  vram_gib: 8 (owner-reported)
-  python: unknown
-  node: unknown
-  dotnet: unknown
+  os: "Windows 11 Home 10.0.26300 (owner observation)"
+  cpu: "Intel i7 (owner-reported; exact model unknown)"
+  ram_gib: 39.7
+  gpu: "NVIDIA RTX 3070 Laptop GPU"
+  vram_gib: 8 (owner-reported/planning value; verify runtime)
+  python: "Python 3.13 executable path observed; exact version not queried"
+  node: "installed; version unknown"
+  dotnet: "installed; version unknown"
 tools:
   wolvenkit:
     status: candidate
-    version: unknown
+    version: "10.0.0-beta.1 (registry observation)"
     role: asset inspection/import/export/packaging
     source: https://github.com/WolvenKit/WolvenKit
-    evidence: []
+    evidence: ["Owner read-only workstation inventory (2026-11-06)"]
   redmod:
     status: candidate
     version: unknown
@@ -90,10 +93,10 @@ tools:
     evidence: []
   blender:
     status: candidate
-    version: unknown
+    version: "4.4.1 primary candidate; 3.0.1 also installed"
     role: original asset creation and CP2077 addon workflow
     source: https://github.com/WolvenKit
-    evidence: []
+    evidence: ["Owner read-only workstation inventory (2026-11-06)"]
 automation:
   github_actions:
     status: active
