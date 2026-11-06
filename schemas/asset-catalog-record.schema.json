@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gold-coast.invalid/schemas/asset-catalog-record.schema.json",
+  "title": "Gold Coast Asset Catalog Record (metadata only)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "kind",
+    "game_version",
+    "source",
+    "source_uri",
+    "provenance",
+    "license_status",
+    "reuse_decision",
+    "verification"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9][A-Z0-9._:-]+$"
+    },
+    "kind": {
+      "enum": [
+        "mesh",
+        "texture",
+        "material",
+        "audio",
+        "animation",
+        "npc_appearance",
+        "vehicle",
+        "building",
+        "prop",
+        "world_node",
+        "tweakdb_record",
+        "other"
+      ]
+    },
+    "game_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "enum": [
+        "base_game_reference",
+        "original_created",
+        "third_party_mod",
+        "licensed_external",
+        "generated",
+        "unknown"
+      ]
+    },
+    "source_uri": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 5
+    },
+    "license_status": {
+      "enum": [
+        "base_game_no_redistribution",
+        "approved",
+        "review_required",
+        "restricted",
+        "unknown"
+      ]
+    },
+    "license_reference": {
+      "type": "string"
+    },
+    "reuse_decision": {
+      "enum": [
+        "reuse_in_game_only",
+        "create_original",
+        "seek_license",
+        "exclude",
+        "pending"
+      ]
+    },
+    "verification": {
+      "enum": [
+        "unverified",
+        "metadata_verified",
+        "in_game_verified"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
