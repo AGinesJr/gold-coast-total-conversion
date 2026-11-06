@@ -1,30 +1,31 @@
 # Gold Coast Phase 0 toolchain lock
 # Do not replace unknowns with guessed version numbers. Update only with observed versions + evidence.
 schema_version: 1
-last_reviewed: 2026-11-05
+last_reviewed: 2026-11-06
 lock_status: discovery
 game:
   title: Cyberpunk 2077
   edition: Ultimate Edition (owner-reported; verify)
   platform: PC
-  executable_version: unknown
-  build_id: unknown
-  dlc_state: unknown
-  install_profile: isolated_gold_coast_required
-  evidence: []
+  executable_version: 3.0.88.46235
+  build_id: Cyberpunk 2077 2.50 (RED4ext runtime log)
+  dlc_state: Ultimate Edition owner-reported; DLC inventory not independently verified
+  install_profile: 'G:\Program Files (x86)\GOG Galaxy\Games\Cyberpunk 2077; isolated Gold Coast staging required'
+  evidence:
+    - owner workstation RED4ext log dated 2026-11-02: Product version 2.50, File version 3.0.88.46235; RED4ext initialized successfully
 operating_environment:
-  os: Windows (owner workstation; verify exact build)
+  os: Windows 11 Home build 26300 (owner-reported)
   cpu: Intel i7 (owner-reported)
   ram_gib: 40 (owner-reported)
   gpu: NVIDIA RTX 3070 Laptop GPU (owner-reported)
   vram_gib: 8 (owner-reported)
-  python: unknown
-  node: unknown
-  dotnet: unknown
+  python: 3.13.5 (owner-reported)
+  node: 22.17.0 (owner-reported)
+  dotnet: 10.0.401 SDK (owner-reported)
 tools:
   wolvenkit:
-    status: candidate
-    version: unknown
+    status: installed
+    version: 10.0.0-beta.1 (owner-reported)
     role: asset inspection/import/export/packaging
     source: https://github.com/WolvenKit/WolvenKit
     evidence: []
@@ -35,38 +36,38 @@ tools:
     source: https://www.cyberpunk.net/en/modding-support
     evidence: []
   red4ext:
-    status: candidate
-    version: unknown
+    status: verified_loaded
+    version: 1.31.0
     role: native plugin framework
     source: https://github.com/WopsS/RED4ext
     evidence: []
   archivexl:
-    status: candidate
-    version: unknown
+    status: verified_loaded
+    version: 1.28.6
     role: custom resources/streaming and non-destructive extensions
     source: https://github.com/psiberx/ArchiveXL
     evidence: []
   tweakxl:
-    status: candidate
-    version: unknown
+    status: verified_loaded
+    version: 1.12.0
     role: TweakDB extensions
     source: https://github.com/psiberx/TweakXL
     evidence: []
   redscript:
-    status: candidate
-    version: unknown
+    status: detected
+    version: unknown (runtime compiler/cache present; exact release unverified)
     role: script compilation/mod logic
     source: https://github.com/jac3km4/redscript
     evidence: []
   cet:
-    status: candidate
-    version: unknown
+    status: installed
+    version: unknown (CET log needed)
     role: Lua console/debug and runtime scripting
     source: https://github.com/maximegmd/CyberEngineTweaks
     evidence: []
   codeware:
-    status: candidate
-    version: unknown
+    status: verified_loaded
+    version: 1.21.2
     role: shared libraries/events/UI
     source: https://github.com/psiberx/Codeware
     evidence: []
