@@ -41,7 +41,7 @@ def validate_toolchain(path: pathlib.Path):
     if missing:
         raise ValueError(f"{path}: missing top-level keys: {sorted(missing)}")
     for name, entry in lock["tools"].items():
-        if entry.get("status") not in {"verified","candidate","unknown","blocked","experimental","planned"}:
+        if entry.get("status") not in {"verified","verified_loaded","installed","detected","active","candidate","unknown","blocked","experimental","planned"}:
             raise ValueError(f"{path}: {name} has invalid status {entry.get('status')!r}")
         if entry.get("status") == "verified" and not entry.get("evidence"):
             raise ValueError(f"{path}: verified tool {name} must include evidence")
