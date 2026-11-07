@@ -1,0 +1,35 @@
+task_id: GC-P0-0004
+agent: AG-00
+objective: Prove safe package install and rollback semantics in a disposable filesystem sandbox.
+context:
+  - docs/P0_D_INSTALL_ROLLBACK_HARNESS.md
+  - docs/P0_D_PACKAGING_PROOF.md
+allowed_paths:
+  - scripts/test_install_rollback.py
+  - tests/test_install_rollback.py
+  - docs/P0_D_INSTALL_ROLLBACK_HARNESS.md
+  - agent/tasks/GC-P0-0004-install-rollback.yaml
+forbidden_actions:
+  - push_to_main
+  - merge_pull_request
+  - deploy_to_game
+  - modify_user_game_install
+  - commit_proprietary_game_assets
+  - claim_runtime_proof_without_evidence
+deliverables:
+  - sandbox_install_simulation
+  - hash_receipt_uninstall
+  - preserve_unowned_files
+  - refuse_overwrite_and_modified_files
+acceptance:
+  - sandbox_install_and_uninstall_tests_pass
+  - preexisting_sandbox_data_preserved
+  - modified_owned_files_are_not_deleted
+risk_tier: low
+budget:
+  max_model_calls: 8
+  max_retries: 2
+  max_minutes: 40
+reviewer: AG-11
+rollback: revert_task_branch_or_close_pull_request
+status: in_progress
