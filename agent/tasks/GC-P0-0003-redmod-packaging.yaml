@@ -1,0 +1,43 @@
+task_id: GC-P0-0003
+agent: AG-00
+objective: Establish a deterministic and CI-validated metadata-only REDmod package scaffold.
+context:
+  - docs/P0_D_PACKAGING_PROOF.md
+  - schemas/agent-task.schema.json
+  - .github/workflows/phase0-validate.yml
+allowed_paths:
+  - scripts/package_redmod.py
+  - tests/test_redmod_packaging.py
+  - tests/fixtures/redmod_stub/**
+  - docs/P0_D_PACKAGING_PROOF.md
+  - agent/tasks/GC-P0-0003-redmod-packaging.yaml
+  - .github/workflows/phase0-validate.yml
+forbidden_actions:
+  - push_to_main
+  - merge_pull_request
+  - publish_release
+  - deploy_to_game
+  - modify_user_game_install
+  - commit_proprietary_game_assets
+  - claim_runtime_proof_without_evidence
+deliverables:
+  - deterministic_redmod_zip_builder
+  - package_integrity_and_manifest_validator
+  - sha256_sidecar
+  - packaging_positive_and_negative_tests
+  - github_actions_package_artifact
+acceptance:
+  - metadata_only_fixture_builds
+  - zip_crc_and_path_validation_pass
+  - manifest_and_top_level_folder_match
+  - sha256_sidecar_generated
+  - negative_tests_reject_invalid_packages
+  - ci_package_and_unit_tests_pass
+risk_tier: low
+budget:
+  max_model_calls: 12
+  max_retries: 2
+  max_minutes: 60
+reviewer: AG-11
+rollback: revert_task_branch_or_close_pull_request
+status: in_progress
