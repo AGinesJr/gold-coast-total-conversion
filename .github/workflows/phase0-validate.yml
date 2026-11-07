@@ -26,5 +26,17 @@ jobs:
         run: python -m pip install -r requirements-dev.txt
       - name: Validate task/toolchain/catalog metadata
         run: python scripts/validate_phase0.py
+      - name: Build metadata-only REDmod scaffold
+        run: python scripts/package_redmod.py build --source tests/fixtures/redmod_stub/GoldCoastPrototype --output build/GoldCoastPrototype.zip
+      - name: Validate package and SHA-256
+        run: python scripts/package_redmod.py validate --package build/GoldCoastPrototype.zip
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
+      - name: Upload package proof artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gold-coast-p0d-redmod-package-proof
+          path: |
+            build/GoldCoastPrototype.zip
+            build/GoldCoastPrototype.zip.sha256
+          if-no-files-found: error
