@@ -1,0 +1,30 @@
+task_id: GC-P0-0003
+title: P0-D REDmod packaging proof
+phase: P0-D
+status: implemented_in_branch_pending_review
+objective: Build and validate a deterministic metadata-only REDmod ZIP scaffold in CI.
+inputs:
+  - docs/P0_D_PACKAGING_PROOF.md
+  - tests/fixtures/redmod_stub/GoldCoastPrototype/info.json
+outputs:
+  - scripts/package_redmod.py
+  - tests/test_redmod_packaging.py
+  - build/GoldCoastPrototype.zip (CI artifact only; not committed)
+allowed_paths:
+  - scripts/package_redmod.py
+  - tests/test_redmod_packaging.py
+  - tests/fixtures/redmod_stub/**
+  - docs/P0_D_PACKAGING_PROOF.md
+  - agent/tasks/GC-P0-0003-redmod-packaging.yaml
+  - .github/workflows/phase0-validate.yml
+forbidden_actions:
+  - push_to_main
+  - deploy_to_game
+  - modify_game_install
+  - include_proprietary_game_assets
+  - claim_runtime_proof_without_evidence
+acceptance:
+  - package_build_and_validate_pass
+  - sha256_sidecar_created
+  - package_negative_tests_pass
+  - github_actions_pass
