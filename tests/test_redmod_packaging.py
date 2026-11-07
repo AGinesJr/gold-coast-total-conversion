@@ -15,7 +15,7 @@ class RedmodPackagingTests(unittest.TestCase):
             digest, count = build(FIXTURE, output)
             result = validate(output)
             self.assertEqual(result["root"], "GoldCoastPrototype")
-            self.assertEqual(count, 2)
+            self.assertEqual(count, 3)
             self.assertEqual(len(digest), 64)
             self.assertTrue(output.with_suffix(".zip.sha256").is_file())
 
